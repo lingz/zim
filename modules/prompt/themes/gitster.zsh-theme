@@ -26,7 +26,8 @@ prompt_gitster_setup() {
 
   autoload -Uz add-zsh-hook
 
-  add-zsh-hook precmd prompt_gitster_precmd
+  # add-zsh-hook precmd prompt_gitster_precmd
+  PROMPT='$(gst_get_status) %F{white}$(gst_get_pwd) $(git_prompt_info)%f '
   prompt_opts=(cr subst percent)
 }
 
